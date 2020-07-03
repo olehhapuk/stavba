@@ -22,7 +22,7 @@
     <div id="mobile-nav" class="mobile-nav">
       <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mobile-nav__list">
         <li itemprop="name" class="mobile-nav__item">
-          <a itemprop="url" href="" class="mobile-nav__link">Naše služby</a>
+          <a itemprop="url" href="../#sluzby" class="mobile-nav__link">Naše služby</a>
         </li>
         <li itemprop="name" class="mobile-nav__item">
           <a itemprop="url" href="" class="mobile-nav__link">Reference</a>
@@ -50,7 +50,7 @@
           <!-- Навигация для десктопа -->
           <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav_inner">
             <li itemprop="name" class="nav__item">
-              <a itemprop="url" href="#" class="nav__link">Naše služby</a>
+              <a itemprop="url" href="../#sluzby" class="nav__link">Naše služby</a>
             </li>
             <li itemprop="name" class="nav__item">
               <a itemprop="url" href="#" class="nav__link">Reference</a>
@@ -64,8 +64,8 @@
     </div>
 </header>
 
-  <!-- breadcrumbs -->
-  <div class="container breadcrumbs">
+<!-- breadcrumbs -->
+<div class="container breadcrumbs">
     <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         <a href="#" title="hlavní" itemprop="item" class="breadcrumb_link-no-active">
@@ -80,9 +80,10 @@
         </a>
       </li>
     </ul>
-  </div><!-- breadcrumbs -->
+</div><!-- breadcrumbs -->
 
 <main>
+
   <!-- info -->
   <div class="container page__contacts" itemscope itemtype="http://schema.org/Organization">
     <div class="row">
@@ -100,12 +101,34 @@
   </div>
   <!-- / info -->
 
+  <!-- folrmular -->
+  <div class="container formular">
   <!-- formular -->
-  <form action="" method="POST">
-    <div class="container">
-      <div class="row"></div>
-    </div>
-  </form>
+    <form action="" method="POST">
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <input class="user_name" type="text" placeholder="vase jmeno">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <input class="user_number" type="text" placeholder="vase telefonni islo">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <textarea class="user_message" rows="5" placeholder="vase zprava"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <a class="formular_btn" href="" type="submit">odeslat</a>
+        <span>Odesláním formuláře souhlasím se zpracováním osobních údajů</span>
+      </div>
+      
+    </form>
+    <!-- / formular -->
+  </div>
   <!-- / formular -->
 
   <!-- maps -->
@@ -115,10 +138,50 @@
     </div>
   </div>
   <!-- / maps -->
+
 </main>
 
 <footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <h3><a href="../">Výstavba & rekonstrukce</a></h3>
+        <h4>Stavební firma</h4>
+        <p><a href="tel:+420 775 954 444">+420 775 954 444</a></p>
+        <p><a href="mailto:info@vystavba-rekonstrukce.cz">info@vystavba-rekonstrukce.cz</a></p>
+        <p>Praha, Korunní 810/104</p>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4">
+
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <p><a href="../">Hlavní</a></p>
+        <p><a href="../sluzby">Naše služby</a></p>
+        <p><a href="../reference">Reference</a></p>
+        <p><a href="#">Kontakty</a></p>
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-4">
+      </div>
+
+    </div>
+
+    <div class="row">
+        <p class="copyright">Výstavba & rekonstrukce 2020 copyright</p>
+    </div>
+
+  </div>
+
 </footer>
 
+<!-- mobile nav -->
+<script>
+  const menuToggle = document.querySelector("#menu-togle"),
+    mobileNavContainer = document.querySelector("#mobile-nav");
+  menuToggle.onclick = function () {
+    menuToggle.classList.toggle("menu-icon-active"), mobileNavContainer.classList.toggle("mobile-nav--active")
+  };
+</script>
 </body>
 </html>
