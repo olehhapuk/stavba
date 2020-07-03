@@ -41,10 +41,6 @@ html {
   margin: 0;
 }
 
-/* hr{
-  background-color: var(--firm-clr-hover);
-} */
-
 /* ------------------------------ common blocks ----------------------------- */
 section{
   max-width: 1200px;
@@ -632,6 +628,7 @@ footer .copyright{
 .section__project{
   border-bottom: 1px solid var(--firm-clr-hover);
   padding: 1em;
+  margin-bottom: 1em;
 }
 
 .section__project h2{
@@ -639,8 +636,26 @@ footer .copyright{
   font-family: 'Roboto', sans-serif;
 }
 
+.swiper-container{
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.slider__img{
+  display: block;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
 .swiper-button-prev, .swiper-button-next{
   color: var(--firm-clr);
+}
+
+@media (max-width: 425px){
+  .section__project{
+    padding: .50em;
+  }
 }
 /* ---------------------------- / page reference ---------------------------- */
 
