@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Výstavba & rekonstrukce | Reference</title>
+  <meta name="description" content="Výstavba & rekonstrukce na Vysočině, v Jihlavě a okolí">
+
+  <!-- g fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+  <!-- swiper js slider -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <!-- fanybox galery -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <!-- styles -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  
+<header>
+    <!-- Кнопка для мобильной навигации -->
+    <div id="menu-togle" class="menu-icon">
+      <div class="menu-icon-line"></div>
+    </div>
+    <!-- Мобильная навигация -->
+    <div id="mobile-nav" class="mobile-nav">
+      <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mobile-nav__list">
+        <li itemprop="name" class="mobile-nav__item">
+          <a itemprop="url" href="../#sluzby" class="mobile-nav__link">Naše služby</a>
+        </li>
+        <li itemprop="name" class="mobile-nav__item">
+          <a itemprop="url" href="#" class="mobile-nav__link mobile-nav__link-active">Reference</a>
+        </li>
+        <li itemprop="name" class="mobile-nav__item">
+          <a itemprop="url" href="../contacts"
+            class="mobile-nav__link">Kontakty</a>
+          </li>
+      </ul>
+    </div>
+    <div class="header">
+      <div class="nav-container">
+        <div class="logo_inner">
+
+          <a class="logo_img" href="../">
+            <img class="logo_image" src="../img/logo.jpg" alt="logo">
+          </a>
+          <div class="logo_wrap">
+            <div class="logo"><a class="logo__href" href="../">Výstavba & rekonstrukce</a></div>
+            <span class="logo_decr">Stavební firma</span>
+          </div>
+        </div>
+        <!-- НАВИГАЦИЯ -->
+        <div class="nav-wrapper">
+          <!-- Навигация для десктопа -->
+          <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav_inner">
+            <li itemprop="name" class="nav__item">
+              <a itemprop="url" href="../#sluzby" class="nav__link">Naše služby</a>
+            </li>
+            <li itemprop="name" class="nav__item">
+              <a itemprop="url" href="#" class="nav__link nav__link-active">Reference</a>
+            </li>
+            <li itemprop="name" class="nav__item">
+              <a itemprop="url" href="../contacts/" class="nav__link">Kontakty</a>
+            </li>
+          </ul>
+        </div><!-- / НАВИГАЦИЯ -->
+      </div>
+    </div>
+</header>
+
+<!-- breadcrumbs -->
+<div class="container breadcrumbs">
+    <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="#" title="hlavní" itemprop="item" class="breadcrumb_link-no-active">
+          <span itemprop="name">hlavní </span><span class="breadcrumb__icon">/</span>
+          <meta itemprop="position" content="0">
+        </a>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="#" title="reference" itemprop="item">
+          <span itemprop="name" class="breadcrumb_link-active">reference</span>
+          <meta itemprop="position" content="1">
+        </a>
+      </li>
+    </ul>
+</div><!-- breadcrumbs -->
+
+<main>
+
+<section>
+  <h1 class="section__title">reference</h1>
+</section>
+
+<section class="section__project">
+  <h2>REKONSTRUKCE SOCIÁLNÍHO ZAŘÍZENÍ</h2>
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+ 
+      <!-- Slides -->
+      <div class="swiper-slide" data-fancybox="gallery">
+        <img  data-src="../img/111.jpg" class="swiper-lazy" alt="111">
+        <!-- Preloader image -->
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+      <div class="swiper-slide" data-fancybox="gallery">
+        <img data-src="../img/111.jpg" class="swiper-lazy" alt="222">
+        <!-- Preloader image -->
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+      <div class="swiper-slide" data-fancybox="gallery">
+        <img data-src="../img/111.jpg" class="swiper-lazy" alt="333">
+        <!-- Preloader image -->
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+    </div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
+</section>
+
+</main>
+
+
+
+<!-- mobile nav -->
+<script>
+  const menuToggle = document.querySelector("#menu-togle"),
+    mobileNavContainer = document.querySelector("#mobile-nav");
+  menuToggle.onclick = function () {
+    menuToggle.classList.toggle("menu-icon-active"), mobileNavContainer.classList.toggle("mobile-nav--active")
+  };
+</script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<!-- swiper js slider -->
+<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    //Optional parameters
+    //centered Slides
+    centeredSlides: true,
+    // Mousewheel Control
+    mousewheel: true,
+    //autoplay
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: true,
+      },
+    // Enable lazy loading
+    lazy: true,
+    // Enable auto height
+    // autoHeight: true,
+    //slides Per View
+    slidesPerView: 1,
+    // can del
+    spaceBetween: 30,
+    direction: 'horizontal',
+    loop: true,
+    // Keyboard Control
+    keyboard: {
+        enabled: true,
+      },
+    // Grab Cursor
+    // grabCursor: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+</script>
+<!-- jquery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<!-- fanybox gallery -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+</body>
+</html>
