@@ -520,7 +520,7 @@ footer .copyright{
 
 /* -------------------------------- start screen ---------------------------- */
 .start__screen{
-  min-height: calc (100vh - 80px);
+  min-height: calc(100vh - 80px);
   width: 100%;
 }
 
@@ -586,7 +586,7 @@ footer .copyright{
 
 .item__desc_wrap{
   position: relative;
-  top: -20px;
+  top: -60px;
   background-color: var(--firm-clr-transparent);
 }
 
@@ -594,7 +594,8 @@ footer .copyright{
   color: #fff;
   font-family: 'open-sans', sans-serif;
   font-size: 1.2em;
-  
+  display: block;
+  padding: 1em;
 }
 /* -------------------------------- / sluzby -------------------------------- */
 
@@ -727,6 +728,7 @@ footer .copyright{
 }
 
 .formular_btn{
+  border: none;
   width: 200px;
   margin: .3em auto;
   padding: .5em;
@@ -738,6 +740,7 @@ footer .copyright{
   background-color: var(--firm-clr-hover);
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }
 
 .formular_btn:hover{
