@@ -66,6 +66,13 @@ a {
   font-size: 2em;
   text-align: center;
 }
+
+@media (max-width:425px){
+  .section__title{
+    padding-top: .5em;
+    font-size: 1.5em;
+  }
+}
 /* ----------------------------- / common blocks ---------------------------- */
 
 
@@ -483,14 +490,14 @@ footer h3{
 }
 
 footer h3 a{
-  font-family: '', sans-serif;
+  font-family: 'open-sans', sans-serif;
   font-size: 1.1em;
   text-decoration: none;
   color: var(--firm-clr);
 }
 
-footer h3 a:hover{
-  text-decoration: underline;
+footer a:hover{
+  color: var(--firm-clr);
 }
 
 footer h4{
@@ -761,7 +768,7 @@ margin: 0 auto;
 .user_name, .user_number{
   width: 100%;
   height: 2em;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .user_name:focus, .user_number:focus, .user_message:focus{
@@ -775,9 +782,9 @@ margin: 0 auto;
 }
 
 .user_message{
-  margin-top: 1em;
+  margin-top: .9em;
   width: 100%;
-  font-size: 1.2em;
+  font-size: 1.35em;
 }
 
 .formular_btn{
