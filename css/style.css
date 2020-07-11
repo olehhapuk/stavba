@@ -592,6 +592,11 @@ margin: 0 auto;
   width: 20%;
   height: 200px;
   margin: .5em;
+  transition: .45s;
+}
+
+.sluzby__item:hover{
+  transform: scale(1.05);
 }
 
 .item__img{
@@ -648,6 +653,11 @@ margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: 33.33%;
+  transition: .45s;
+}
+
+.advantages__item:hover {
+  transform: scale(1.09);
 }
 
 .advantages__item img{
