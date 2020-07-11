@@ -781,6 +781,11 @@ margin: 0 auto;
   background-color: var(--firm-clr);
 }
 
+.formular_loader{
+  display: flex;
+  justify-content: center;
+}
+
 .formular span{
   text-align: center;
   margin-bottom: 1em;

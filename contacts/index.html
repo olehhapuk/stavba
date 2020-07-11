@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -108,7 +109,7 @@
 <section>
   <div class="container formular">
   <!-- formular -->
-    <form id="form">
+    <form id="form" method="POST" action="form.php">
 
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
@@ -126,7 +127,20 @@
       </div>
 
       <div class="row">
-        <input class="formular_btn" type="submit">odeslat</a>
+        <div class="formular_loader" id="form_loader" style="display: none;">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <!-- Alerts -->
+        <div class="alert alert-success" id="form_alert_success" role="alert" style="display: none;">
+          Message has been sent
+        </div>
+        <div class="alert alert-danger" id="form_alert_fail" role="alert" style="display: none;">
+          Error occured, please try again
+        </div>
+        <!-- / Alerts -->
+        <input class="formular_btn" id="form_submit" type="submit" value="odeslat">
         <span>Odesláním formuláře souhlasím se zpracováním osobních údajů</span>
       </div>
       
@@ -214,9 +228,31 @@
   $('#form').submit(e => {
     e.preventDefault();
 
-    $.post('form.php', $(this).serialize(), function(data, status) {
-      console.log(status);
+    const loader = document.getElementById('form_loader');
+    const submitBtn = document.getElementById('form_submit');
+    const alertSuccess = document.getElementById('form_alert_success');
+    const alertFail = document.getElementById('form_alert_fail');
+
+    submitBtn.style.display = 'none';
+    loader.style.display = 'flex';
+
+    $.post('form.php', $('#form').serialize(), function(data, status) {
+      submitBtn.style.display = 'block';
+      loader.style.display = 'none';
+
+      if (status == 'success') {
+        alertSuccess.style.display = 'block';
+        setTimeout(hideAlert, 3000, alertSuccess);
+      }
+      else {
+        alertFail.style.display = 'block';
+        setTimeout(hideAlert, 3000, alertFail);
+      }
     })
+
+    function hideAlert(alert) {
+      alert.style.display = 'none';
+    }
   })
 </script>
 
