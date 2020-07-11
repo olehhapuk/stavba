@@ -1,3 +1,3 @@
 # stavba
 stavebni firma Výstavba &amp; rekonstrukce
-[Preview](http://localhost/)
+[Preview](https://khoroshavin.github.io/stavba/)
