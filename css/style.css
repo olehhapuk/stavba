@@ -12,7 +12,7 @@
 /* page contacts
    -desc of service
    -example of project
-   */
+*/
 /* page of service */
 /* formular       */
 /* ----------------------------- / struture of css -------------------------- */
@@ -751,7 +751,7 @@ margin: 0 auto;
 .user_name, .user_number{
   width: 100%;
   height: 2em;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .user_name:focus, .user_number:focus, .user_message:focus{

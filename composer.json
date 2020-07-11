@@ -1,5 +1,5 @@
 {
-    "name": "oleh/stavba",
+    "name": "stavba",
     "require": {
         "phpmailer/phpmailer": "^6.1"
     }
