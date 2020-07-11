@@ -1,0 +1,6 @@
+{
+    "name": "oleh/stavba",
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    }
+}
