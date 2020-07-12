@@ -12,7 +12,7 @@
   <!-- bootstrap -->
   <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
   <!-- swiper js slider -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <!-- fanybox galery -->
   <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
   <!-- styles -->
@@ -105,17 +105,25 @@
  
       <!-- Slides -->
       <div class="swiper-slide" data-fancybox="gallery">
-        <img class="slider__img swiper-lazy" data-src="../img/111.jpg" alt="111">
+        <a href="../img/111.jpg" data-fancybox="images">
+          <img class="slider__img swiper-lazy" src="../img/111.jpg" alt="111">
+        </a>
         <!-- Preloader image -->
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
       </div>
+
       <div class="swiper-slide" data-fancybox="gallery">
-        <img class="slider__img swiper-lazy" data-src="../img/111.jpg" alt="222">
+        <a href="../img/betonovani.jpg" data-fancybox="images">
+          <img class="slider__img swiper-lazy" src="../img/betonovani.jpg" alt="222">
+        </a>
         <!-- Preloader image -->
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
       </div>
+
       <div class="swiper-slide" data-fancybox="gallery">
-        <img class="slider__img swiper-lazy" data-src="../img/111.jpg" alt="333">
+        <a href="../img/111.jpg" data-fancybox="images">
+          <img class="slider__img swiper-lazy" src="../img/111.jpg" alt="333">
+        </a>
         <!-- Preloader image -->
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
       </div>
@@ -131,56 +139,44 @@
 </main>
 
 
-
-<!-- mobile nav -->
-<script>
-  const menuToggle = document.querySelector("#menu-togle"),
-    mobileNavContainer = document.querySelector("#mobile-nav");
-  menuToggle.onclick = function () {
-    menuToggle.classList.toggle("menu-icon-active"), mobileNavContainer.classList.toggle("mobile-nav--active")
-  };
-</script>
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<!-- swiper js slider -->
-<script>
-  var mySwiper = new Swiper ('.swiper-container', {
-    //Optional parameters
-    //centered Slides
-    centeredSlides: true,
-    // Mousewheel Control
-    mousewheel: true,
-    //autoplay
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: true,
-      },
-    // Enable lazy loading
-    lazy: true,
-    // Enable auto height
-    // autoHeight: true,
-    //slides Per View
-    slidesPerView: 1,
-    // can del
-    spaceBetween: 30,
-    direction: 'horizontal',
-    loop: true,
-    // Keyboard Control
-    keyboard: {
-        enabled: true,
-      },
-    // Grab Cursor
-    // grabCursor: true,
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
-</script>
 <!-- jquery -->
 <script src="../js/jquery-3.5.1.min.js"></script>
 <!-- fancybox gallery -->
 <script src="../js/jquery.fancybox.min.js"></script>
+<!-- Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- mobile nav -->
+<script>
+  $.fancybox.defaults.backFocus = false;
+
+  const menuToggle = document.querySelector("#menu-togle"),
+    mobileNavContainer = document.querySelector("#mobile-nav");
+
+  menuToggle.onclick = function () {
+    menuToggle.classList.toggle("menu-icon-active"), mobileNavContainer.classList.toggle("mobile-nav--active");
+  }
+  
+  var mySwiper = new Swiper('.swiper-container', {
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    direction: 'horizontal',
+    loop: false,
+    keyboard: {
+      enabled: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 
 
 </body>
