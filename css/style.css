@@ -12,7 +12,7 @@
 /* page contacts
    -desc of service
    -example of project
-   */
+*/
 /* page of service */
 /* formular       */
 /* ----------------------------- / struture of css -------------------------- */
@@ -65,6 +65,13 @@ a {
   font-weight: 500;
   font-size: 2em;
   text-align: center;
+}
+
+@media (max-width:425px){
+  .section__title{
+    padding-top: .5em;
+    font-size: 1.5em;
+  }
 }
 /* ----------------------------- / common blocks ---------------------------- */
 
@@ -483,14 +490,14 @@ footer h3{
 }
 
 footer h3 a{
-  font-family: '', sans-serif;
+  font-family: 'open-sans', sans-serif;
   font-size: 1.1em;
   text-decoration: none;
   color: var(--firm-clr);
 }
 
-footer h3 a:hover{
-  text-decoration: underline;
+footer a:hover{
+  color: var(--firm-clr);
 }
 
 footer h4{
@@ -594,6 +601,11 @@ margin: 0 auto;
   margin: .5em;
   position: relative;
   box-sizing: border-box;
+  transition: .45s;
+}
+
+.sluzby__item:hover{
+  transform: scale(1.05);
 }
 
 .item__img{
@@ -652,6 +664,11 @@ margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: 33.33%;
+  transition: .45s;
+}
+
+.advantages__item:hover {
+  transform: scale(1.09);
 }
 
 .advantages__item img{
@@ -755,7 +772,7 @@ margin: 0 auto;
 .user_name, .user_number{
   width: 100%;
   height: 2em;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .user_name:focus, .user_number:focus, .user_message:focus{
@@ -769,9 +786,9 @@ margin: 0 auto;
 }
 
 .user_message{
-  margin-top: 1em;
+  margin-top: .9em;
   width: 100%;
-  font-size: 1.2em;
+  font-size: 1.35em;
 }
 
 .formular_btn{
@@ -814,3 +831,69 @@ margin: 0 auto;
 /* ------------------------------- / formular ------------------------------- */
 
 
+/* ----------------------------- block contacts ----------------------------- */
+.contacts__wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacts__wrap div{
+  min-width: 50%;
+}
+
+.contacts__block h3{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4em;
+}
+
+.contacts__block a {
+  color: var(--firm-clr);
+  font-family: 'open-sans', sans-serif;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.contacts__addr{
+  font-family: 'open-sans', sans-serif;
+}
+
+.contacts__work_time_title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.contacts__work_time{
+  display: flex;
+  flex-direction: row;
+  margin-top: .5em;
+}
+
+.contacts__work_time span{
+  font-family: 'open-sans', sans-serif;
+}
+
+.contacts__work1{
+  margin-right: 1em;  
+}
+
+.g-map{
+  width: 100%;
+}
+
+.contacts__work1, .contacts__work2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media (max-width: 810px){
+  .contacts__wrap{
+    flex-direction: column;
+  }
+  
+  .contacts__wrap div{
+    max-width: 100%;
+  }
+}
+/* ---------------------------- / block contacts ---------------------------- */
